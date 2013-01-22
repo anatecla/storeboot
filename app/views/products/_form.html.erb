@@ -1,4 +1,4 @@
-<%= form_for @product, :html => { :class => 'form-horizontal' } do |f| %>
+<!--<%= simple_form_for @product, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
     <div class="controls">
@@ -17,4 +17,22 @@
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 products_path, :class => 'btn' %>
   </div>
+<% end %>-->
+
+
+<!-- With simpleforms -->
+<%= simple_form_for @product, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Product</legend>
+
+    <%= f.input :name %>
+        <%= f.input :price %>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', products_path, :class => 'btn' %>
+    </div>
+  </fieldset>
 <% end %>
+
+

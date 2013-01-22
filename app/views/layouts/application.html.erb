@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <!-- Navigation bar -->
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -33,11 +34,25 @@
   </div>
 
   <div class="container">
+    <!-- Flash messages -->
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+      <!-- Close button -->
+      <a class="close" data-dismiss="alert">x</a>
+        <!-- Message -->
+        <%= msg  %>
+      </div>
+    <% end %>
+
     <div class="row">
       <div class="span9"><%= yield %></div>
       <div class="span3">
         <h2>About Us, Plants</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
+        <p>Plants, also called green plants (Viridiplantae in Latin), are living organisms of the kingdom Plantae including such multicellular groups as flowering plants, conifers, ferns and mosses, as well as, depending on definition, the green algae, but not red or brown seaweeds like kelp, nor fungi or bacteria.
+
+Green plants have cell walls with cellulose and characteristically obtain most of their energy from sunlight via photosynthesis using chlorophyll contained in chloroplasts, which gives them their green color. Some plants are parasitic and may not produce normal amounts of chlorophyll or photosynthesize. Plants are also characterized by sexual reproduction, modular and indeterminate growth, and an alternation of generations, although asexual reproduction is common, and some plants bloom only once while others bear only one bloom.
+
+Precise numbers are difficult to determine, but as of 2010, there are thought to be 300–315 thousand species of plants, of which the great majority, some 260–290 thousand, are seed plants (see the table below).Green plants provide most of the world's molecular oxygen and are the basis of most of the earth's ecologies, especially on land. Plants described as grains, fruits and vegetables form mankind's basic foodstuffs, and have been domesticated for millennia. Plants enrich our lives as flowers and ornaments. Until recently and in great variety they have served as the source of most of our medicines and drugs. Their scientific study is known as botany.</p>  
       </div>
   </div>
 
