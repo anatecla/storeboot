@@ -1,0 +1,48 @@
+// Set the correct sprite paths
+$iconSpritePath: image-path('glyphicons-halflings.png');
+$iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
+
+$navbarBackground: #555;
+$navbarBackgroundHighlight: #3D5200;
+$navbarText: #eee;
+$navbarLinkColor: #eee;
+
+@import "bootstrap";
+
+body { padding-top: 80px; }
+
+@import "bootstrap-responsive";
+
+.navbar .brand {
+  color: #FAFFB8;
+}
+
+
+// (Ana)
+$textColor: #3D5200;
+$box: #eee;
+
+@mixin rounded-corners {
+  border-radius: 10px;
+  -moz-border-radius: 10x;
+  -webkit-border-radius: 10px;
+}
+
+p {
+  color: $textColor;
+}
+
+.span3 {
+  background: $box;
+  @include rounded-corners;
+
+    h2 {
+      color: $textColor;
+      border-bottom: dashed 3px darken($textColor, 5%);
+    }
+}
+
+
+
+
+

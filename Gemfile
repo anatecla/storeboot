@@ -18,7 +18,8 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails'
+  # gem 'twitter-bootstrap-rails' #Esto usa LESS
+  gem 'bootstrap-sass' # Esto usa SASS
   gem 'less-rails'
   gem 'simple_form'
 end
