@@ -1,8 +1,10 @@
 # Ruby on Rails Tutorial: first application
 
-This is the first application for
+This is the first application for AnaTecla following
 [*Ruby on Rails Tutorial: Learn Rails by Example*](http://railstutorial.org/)
 by [Michael Hartl](http://michaelhartl.com/).
+
+But before was the first application to use Twitter Bootstrap followed in http://railscasts.com/episodes/329-more-on-twitter-bootstrap?view=asciicast
 
 
 
